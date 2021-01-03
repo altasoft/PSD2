@@ -32,7 +32,8 @@
         * Press 'Download' button
         * Wait while new version is being downloaded
         * Press 'Install' button
-        * You will be prompted to select SSL certificate for this site. Please choose the right one
+        * You will be prompted to select SSL certificate for this site. 
+        * Please choose the right one and press 'OK'
 
 
     1.  That's it. 
