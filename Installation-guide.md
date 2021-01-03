@@ -12,6 +12,6 @@
 
 1. ### ***Run as administrator*** AltaSoft.PSD2.Iis.Installer.exe
 
-    ![Image](images/installer-settings.png)
+    ![Image](images/Installer-settings.png)
 
   
