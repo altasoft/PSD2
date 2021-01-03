@@ -13,7 +13,7 @@
 
     1.  After program is loaded, you will see this screen:
 
-            ![Image](../main/Images/Installer-settings.png)
+        ![Image](../main/Images/Installer-settings.png)
 
   
         * Fill all settings
@@ -28,7 +28,7 @@
 
          ![Image](../main/Images/Installer-sandbox.png)
 
-        * Verify than Location & Hostname-s are correct
+        * Verify that Location & Hostname-s are correct
         * Press 'Download' button
         * Wait while new version is being downloaded
         * Press 'Install' button
