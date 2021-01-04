@@ -46,13 +46,13 @@ _ვარიანტი availableAccountsWithBalance (Optional)_
 
 ---
 
-##კითხვები
+## კითხვები
 
 - მეორე ვარიანტში, ნაშთებზე თუ უფლებას ვაძლევთ, ნიშნავს ეს, რომ დეტალებზეც ვაძლევთ?
 
 ---
 
-##References
+## References
 SCA-ს შესახებ, Implementation Guide Page 143 წერია ასე:
 
 >_For the first of these specific Consent Requests, no assumptions are made for the SCA Approach by this specification, since there are no balances or transaction information contained and this is then not unambigously required by [EBA-RTS]. It is up to the ASPSP to implement the appropriate requirements on customer authentication._
