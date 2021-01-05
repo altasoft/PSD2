@@ -50,6 +50,7 @@
         * You will be prompted to select SSL certificate for this site. 
         * Please choose the right one and press 'OK'
 
+        ![Image](../main/Images/Installer-ssl-cert.png)
 
     1.  That's it. :smiley:
         * Check that everything is working as expected
