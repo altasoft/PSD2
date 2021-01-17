@@ -30,7 +30,7 @@
     You can download it from our support portal 
      [Alta Software Support Site](https://jira.altasoft.ge/)
 
-1. ## Install PSD2 Developer Portal and Sandbox aplications in IIS
+1. ## Extract PSD2 Developer Portal and Sandbox aplications in IIS folders
     
     1. Create folder for PSD2 sandbox applications, i.e. ```C:\Inetpub\PSD2```
     1. Extract sandbox-portal-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\portal``` folder
@@ -52,96 +52,98 @@
     "InstanceId": 1
     ```
 
+1. ## Install PSD2 Developer Portal and Sandbox aplications in IIS
+
     1. Go to Internet Information Services (IIS) Manager
     1. Create Application Pools
         
         ![Image](../main/Images/EditAppPool.png)
 
-        1.
-            1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-            1. Enter ```AltaSoft.PSD2.DeveloperPortal_AppPool``` into ```name``` field
-            1. Select ```No Managed Code``` in ```.NET CLR version``` field
-            1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        #### Developer Portal
+        1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
+        1. Enter ```AltaSoft.PSD2.DeveloperPortal_AppPool``` into ```name``` field
+        1. Select ```No Managed Code``` in ```.NET CLR version``` field
+        1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
-        1.
-            1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-            1. Enter ```AltaSoft.PSD2.AuthServer_AppPool``` into ```name``` field
-            1. Select ```No Managed Code``` in ```.NET CLR version``` field
-            1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        #### OAuth2 Server API
+        1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
+        1. Enter ```AltaSoft.PSD2.AuthServer_AppPool``` into ```name``` field
+        1. Select ```No Managed Code``` in ```.NET CLR version``` field
+        1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
-        1.
-            1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-            1. Enter ```AltaSoft.PSD2.AuthWeb_AppPool``` into ```name``` field
-            1. Select ```No Managed Code``` in ```.NET CLR version``` field
-            1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        #### OAuth2 Server Web
+        1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
+        1. Enter ```AltaSoft.PSD2.AuthWeb_AppPool``` into ```name``` field
+        1. Select ```No Managed Code``` in ```.NET CLR version``` field
+        1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
-        1.
-            1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-            1. Enter ```AltaSoft.PSD2.XS2A_AppPool``` into ```name``` field
-            1. Select ```No Managed Code``` in ```.NET CLR version``` field
-            1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        #### XS2A API
+        1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
+        1. Enter ```AltaSoft.PSD2.XS2A_AppPool``` into ```name``` field
+        1. Select ```No Managed Code``` in ```.NET CLR version``` field
+        1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
     1. Create Web Sites
 
          ![Image](../main/Images/AddWebSite.png)
 
-        1.
-            1. Select ```Sites```, right click it and select ```Add Website...```
-            1. Enter ```AltaSoft.PSD2.DeveloperPortal``` into ```Site name``` field
-            1. Select ```AltaSoft.PSD2.DeveloperPortal_AppPool``` in ```Application pool``` field
-            1. Enter ```C:\Inetpub\PSD2\portal``` into ```Physical path``` field
-            1. Select ```https``` in ```Binding: Type``` field
-            1. Enter ```portal-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
-            1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
-            1. Press ```OK```
-            1. Select newly created site, right click it and select ```Edit Bindings...```
-            1. Select ```http``` in ```Type``` field
-            1. Enter ```portal-psd2.yourdomain.ge``` in ```Host name``` field
-            1. Press ```OK```
+        #### Developer Portal
+        1. Select ```Sites```, right click it and select ```Add Website...```
+        1. Enter ```AltaSoft.PSD2.DeveloperPortal``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.DeveloperPortal_AppPool``` in ```Application pool``` field
+        1. Enter ```C:\Inetpub\PSD2\portal``` into ```Physical path``` field
+        1. Select ```https``` in ```Binding: Type``` field
+        1. Enter ```portal-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
+        1. Press ```OK```
+        1. Select newly created site, right click it and select ```Edit Bindings...```
+        1. Select ```http``` in ```Type``` field
+        1. Enter ```portal-psd2.yourdomain.ge``` in ```Host name``` field
+        1. Press ```OK```
 
-        1.
-            1. Select ```Sites```, right click it and select ```Add Website...```
-            1. Enter ```AltaSoft.PSD2.AuthServer``` into ```Site name``` field
-            1. Select ```AltaSoft.PSD2.AuthServer_AppPool``` in ```Application pool``` field
-            1. Enter ```C:\Inetpub\PSD2\authserver-sandbox``` into ```Physical path``` field
-            1. Select ```https``` in ```Binding: Type``` field
-            1. Enter ```authserver-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
-            1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
-            1. Press ```OK```
-            1. Select newly created site and select ```SSL Settings```
-          
-                    ![Image](../main/Images/SslSettings.png)
+        #### OAuth2 Server API
+        1. Select ```Sites```, right click it and select ```Add Website...```
+        1. Enter ```AltaSoft.PSD2.AuthServer``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.AuthServer_AppPool``` in ```Application pool``` field
+        1. Enter ```C:\Inetpub\PSD2\authserver-sandbox``` into ```Physical path``` field
+        1. Select ```https``` in ```Binding: Type``` field
+        1. Enter ```authserver-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
+        1. Press ```OK```
+        1. Select newly created site and select ```SSL Settings```
+        
+            ![Image](../main/Images/SslSettings.png)
 
-                    1. Select ```Require SSL```
-                    1. Select ```Require``` in ```Client certificates```
-            1. Press ```Apply``` button
+            1. Select ```Require SSL```
+            1. Select ```Require``` in ```Client certificates```
+        1. Press ```Apply``` button
             
-        1.
-            1. Select ```Sites```, right click it and select ```Add Website...```
-            1. Enter ```AltaSoft.PSD2.AuthWeb``` into ```Site name``` field
-            1. Select ```AltaSoft.PSD2.AuthWeb_AppPool``` in ```Application pool``` field
-            1. Enter ```C:\Inetpub\PSD2\authweb-sandbox``` into ```Physical path``` field
-            1. Select ```https``` in ```Binding: Type``` field
-            1. Enter ```authweb-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
-            1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
-            1. Press ```OK```
+        #### OAuth2 Server Web
+        1. Select ```Sites```, right click it and select ```Add Website...```
+        1. Enter ```AltaSoft.PSD2.AuthWeb``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.AuthWeb_AppPool``` in ```Application pool``` field
+        1. Enter ```C:\Inetpub\PSD2\authweb-sandbox``` into ```Physical path``` field
+        1. Select ```https``` in ```Binding: Type``` field
+        1. Enter ```authweb-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
+        1. Press ```OK```
 
-        1.
-            1. Select ```Sites```, right click it and select ```Add Website...```
-            1. Enter ```AltaSoft.PSD2.XS2A``` into ```Site name``` field
-            1. Select ```AltaSoft.PSD2.xs2a-sandbox``` in ```Application pool``` field
-            1. Enter ```C:\Inetpub\PSD2\xs2a-sandbox``` into ```Physical path``` field
-            1. Select ```https``` in ```Binding: Type``` field
-            1. Enter ```xs2a-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
-            1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
-            1. Press ```OK```
-            1. Select newly created site and select ```SSL Settings```
-          
-                    ![Image](../main/Images/SslSettings.png)
+        #### XS2A API
+        1. Select ```Sites```, right click it and select ```Add Website...```
+        1. Enter ```AltaSoft.PSD2.XS2A``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.xs2a-sandbox``` in ```Application pool``` field
+        1. Enter ```C:\Inetpub\PSD2\xs2a-sandbox``` into ```Physical path``` field
+        1. Select ```https``` in ```Binding: Type``` field
+        1. Enter ```xs2a-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
+        1. Press ```OK```
+        1. Select newly created site and select ```SSL Settings```
+        
+            ![Image](../main/Images/SslSettings.png)
 
-                    1. Select ```Require SSL```
-                    1. Select ```Require``` in ```Client certificates```
-            1. Press ```Apply``` button
+            1. Select ```Require SSL```
+            1. Select ```Require``` in ```Client certificates```
+        1. Press ```Apply``` button
 
 
     1.  That's it. :smiley:
