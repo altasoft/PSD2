@@ -37,7 +37,9 @@
     1. Extract sandbox-auth-server-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authserver-sandbox``` folder
     1. Extract sandbox-auth-web-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authweb-sandbox``` folder
     1. Extract sandbox-xs2a-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\xs2a-sandbox``` folder
-    1. Go to each folder, find appsettings.json file, open it and fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database
+    1. Go to each folder, find ```appsettings.json``` file, open it and fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database
+    1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://authserver-sandbox-psd2.yourdomain.ge```
+
 
     ```json
     "Database": {
@@ -144,6 +146,15 @@
             1. Select ```Require SSL```
             1. Select ```Require``` in ```Client certificates```
         1. Press ```Apply``` button
+
+    1. Install altasoftPsd2RootCa.crt
+
+        1. In File Explorer, goto ```C:\Inetpub\PSD2\portal\Certificates``` folder, locate file ```altasoftPsd2RootCa.crt```
+        1. Right click it and press ```Install Certificate```
+        1. In ```Store Location``` select ```Local Machine``` and press ```Next``` button
+        1. Select ```Place all certificates in the following store``` and press ```Browse``` button
+        1. Select ```Trusted Root Certification Authorities``` and press ```Next``` button
+        1. Press ```OK``` button
 
 
     1.  That's it. :smiley:
