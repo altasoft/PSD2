@@ -38,14 +38,17 @@
     1. Extract sandbox-auth-web-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authweb-sandbox``` folder
     1. Extract sandbox-xs2a-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\xs2a-sandbox``` folder
     1. Go to each folder, find ```appsettings.json``` file, open it and fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database
-    1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://authserver-sandbox-psd2.yourdomain.ge```
-
-
     ```json
     "Database": {
         "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
     }
     ```
+    1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://authserver-sandbox-psd2.yourdomain.ge```
+    ```json
+    "OAuth2ServerBaseUrl": "https://authserver-sandbox-psd2.yourdomain.ge"
+    ```
+
+
 
     1. Go to each folder, find hosting.json file, open it and write this:
 
