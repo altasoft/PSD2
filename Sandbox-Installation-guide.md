@@ -13,7 +13,7 @@
     Download the installer using the following link: 
     [Current PSD2 Sandbox Installer direct download](https://send.altasoft.ge/download.php?id=77&token=siAJ5SE69pNdKXb8YhF8zJNpbLywNlww)
     
-1. ## Run AltaSoft.PSD2.Iis.Installer.exe ***as administrator***
+1. ## Run AltaSoft.PSD2.Iis.Installer.exe as ```administrator```
 
     1.  After program is loaded, you will see the login screen:
 
