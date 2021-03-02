@@ -18,12 +18,14 @@
         * Fill Bank BIC code - Your bank's 9 digit SWIFT BIC code
         * Type your password and then press 'Next' button
 
-    1.  Now you will see the SQL connection screen:
+    1.  Now you will see the Database and Certificate screen:
 
         ![Image](../main/Images/Installer-sql.png)
 
-        * If you already installed SQL database, then please skip this step by pressin 'Skip' buttom
-        * IF not, then fill SQL connection string and press 'Next' button *(You can use Sql connection string dialog by pressing '...' button)*
+        * Fill SQL connection string *(You can use Sql connection string dialog by pressing '...' button)*
+        * Fill your QSealC certificates thumbprint and press 'Next' button *(You can use Select Certificate dialog by pressing '...' button)*
+            * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
+            * It should have private key.
 
         ![Image](../main/Images/Installer-sql-dialog.png)
 
@@ -35,7 +37,7 @@
             
             * Base hostname - Base hostname for PSD2 Web services/sites. Should match your SSL certificate
             * Base location - Base physical path, where all PSD2 related Web services/sites will be installed
-            * Instance Id - Id of this instance of IIS. Should be positive integer number and unique across your infrastructure
+            * Load balancer - Check this if you have load balancer in front of IIS
        
         * Verify that all settings are good and then press 'Next' button
 
