@@ -10,7 +10,8 @@
     For more detailed instructions on how to install the ASP.NET Core Module, see [Install the .NET Core Hosting Bundle.](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-5.0)
 
 1. ## Download AltaSoft.PSD2.Iis.Installer.exe
-    [Current installer direct download](https://send.altasoft.ge/download.php?id=77&token=siAJ5SE69pNdKXb8YhF8zJNpbLywNlww)
+    Download the installer using the following link: 
+    [Current PSD2 Sandbox Installer direct download](https://send.altasoft.ge/download.php?id=77&token=siAJ5SE69pNdKXb8YhF8zJNpbLywNlww)
     
 1. ## Run AltaSoft.PSD2.Iis.Installer.exe ***as administrator***
 
