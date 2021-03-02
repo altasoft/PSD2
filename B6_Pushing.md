@@ -13,7 +13,8 @@
             "PCards": "Data Source=Sql;Initial Catalog=CARDS2011;Integrated Security=true;Application Name=B6.Pushing"
         }
         ```
-        1. ```BusProviders``` სექციაში ჩაწერეთ ```B6.Events```,  ```B6.Transactions``` ელემენტებში ```RabbitMq``` პარამეტრები
+        
+        2. ```BusProviders``` სექციაში ჩაწერეთ ```B6.Events```,  ```B6.Transactions``` ელემენტებში ```RabbitMq``` პარამეტრები
         ```json
         "BusProviders": {
                 "B6.Events": {
@@ -26,20 +27,21 @@
                 }
         }
         ```
-
-        1. ```AppEnvironment``` სექციაში ჩაწერეთ ```Testing``` ან ```Production```
+        
+        3. ```AppEnvironment``` სექციაში ჩაწერეთ ```Testing``` ან ```Production```
         ```json
         "AppEnvironment": {
             "Type": "Testing"
         }
         ```
 
-        1. გახსენით  ```hosting.json``` ფაილი ნებისმიერი ტექსტური რედაქტორით და გაუწერეთ თავისუფალი პორტი (შეგიძლიათ არ შეცვალოთ და დატოვოთ რაც არის):
+        4. გახსენით  ```hosting.json``` ფაილი ნებისმიერი ტექსტური რედაქტორით და გაუწერეთ თავისუფალი პორტი (შეგიძლიათ არ შეცვალოთ და დატოვოთ რაც არის):
         ```json
         {
             "urls": "http://*:9012"
         }
         ```
+        
 1. ## გაუშვით B6.Pushing-ის SQL სკრიპტები
     1. გახსენით ```sql.rar``` ფაილი და ყველა სკრიპტი გადაატარეთ ```BANK2000``` ბაზაზე
     1. გახსენით ```sqlPCards.rar``` ფაილი და ყველა სკრიპტი გადაატარეთ ```CARDS2011``` ბაზაზე
