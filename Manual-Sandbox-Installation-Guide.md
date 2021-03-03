@@ -44,21 +44,20 @@
             "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
         }
         ```
-        1. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
+        2. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
         ```json
         "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
         ```
-            * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
-            * It should have private key.
-            * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://send.altasoft.ge/download.php?id=76&token=5bxpjxHMkTrfsVVzCXx87gafRj2c7OTi). Password is: ```123456```. Install it as ```Trusted Root``` certificate
 
-    ```
-    1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://authserver-sandbox-psd2.yourdomain.ge```
-    ```json
-    "OAuth2ServerBaseUrl": "https://authserver-sandbox-psd2.yourdomain.ge"
-    ```
+        * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
+        * It should have private key.
+        * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://send.altasoft.ge/download.php?id=76&token=5bxpjxHMkTrfsVVzCXx87gafRj2c7OTi). Password is: ```123456```. Install it as ```Trusted Root``` certificate
 
-
+   
+    1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://psd2-authserver-sandbox.yourdomain.ge```
+        ```json
+        "OAuth2ServerBaseUrl": "https://psd2-authserver-sandbox.yourdomain.ge"
+        ```
 
     1. Go to each folder, find hosting.json file, open it and write this:
 
@@ -112,12 +111,12 @@
         1. Select ```AltaSoft.PSD2.DeveloperPortal_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\portal``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
-        1. Enter ```portal-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Enter ```psd2-portal.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
         1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
         1. Press ```OK```
         1. Select newly created site, right click it and select ```Edit Bindings...```
         1. Select ```http``` in ```Type``` field
-        1. Enter ```portal-psd2.yourdomain.ge``` in ```Host name``` field
+        1. Enter ```psd2-portal.yourdomain.ge``` in ```Host name``` field
         1. Press ```OK```
 
         #### OAuth2 Server API
@@ -126,7 +125,7 @@
         1. Select ```AltaSoft.PSD2.AuthServer_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\authserver-sandbox``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
-        1. Enter ```authserver-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Enter ```psd2-authserver-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
         1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
         1. Press ```OK```
         1. Select newly created site and select ```SSL Settings```
@@ -143,7 +142,7 @@
         1. Select ```AltaSoft.PSD2.AuthWeb_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\authweb-sandbox``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
-        1. Enter ```authweb-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Enter ```psd2-authweb-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
         1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
         1. Press ```OK```
 
@@ -153,7 +152,7 @@
         1. Select ```AltaSoft.PSD2.xs2a-sandbox``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\xs2a-sandbox``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
-        1. Enter ```xs2a-sandbox-psd2.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
+        1. Enter ```psd2-xs2a-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
         1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
         1. Press ```OK```
         1. Select newly created site and select ```SSL Settings```

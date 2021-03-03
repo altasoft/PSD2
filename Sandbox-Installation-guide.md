@@ -26,7 +26,7 @@
 
         ![Image](../main/Images/Installer-sql.png)
 
-        * Fill SQL connection string for SQL server, where PSD2 database will be created *(You can use Sql connection string dialog by pressing '...' button)*
+        * Fill SQL connection string for SQL server, where PSD2 database will be created. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database *(You can use Sql connection string dialog by pressing '...' button)*
         * Fill your QSealC certificates thumbprint and press 'Next' button *(You can use Select Certificate dialog by pressing '...' button)*
             * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
             * It should have private key.
