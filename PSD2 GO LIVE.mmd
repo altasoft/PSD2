@@ -1,0 +1,41 @@
+gantt
+    title PSD2 Implementation Steps
+    dateFormat  YYYY-MM-DD
+    excludes    weekends
+    
+    section PSD2
+    BANK - 1 ვირტუალური მანქანის მომზადება (8 GB RAM, 2 CPU): v1, 2021-03-01, 5d
+    BANK - 1 Database-ის მომზადება (შესაძლებელია უფასო Express edition) :v2, 2021-03-01, 5d
+    
+    BANK-ALTA - დეველოფერ პორტალის დიზაინის შეთანხმება                :done, a1, 2021-03-01, 2d
+    ALTA - დეველოფერ პორტალის დიზაინის შესრულება                     :done, a2, after a1, 2d
+    BANK-ALTA - Login/Sca/Account ფეიჯების დიზაინის შეთანხმება          :done, a3, 2021-03-01, 2d
+    ALTA - Login/Sca/Account ფეიჯების დიზაინის შესრულება               :done, a4, 2021-03-03, 3d
+    BANK - დეველოფერ პორტალის და სენდბოქსის ინსტალაცია               :crit, a5, after a4, 2d
+
+    BANK - 1 ვირტუალური მანქანის მომზადება (16 GB RAM, 4 CPU) (2 ცალი High Availability თუ გინდათ): b1, 2021-03-01, 13d
+    BANK - 1 Database-ის მომზადება : b2, 2021-03-01, 13d
+    ALTA - PSD2 სისტემის საბოლოო ვერსიის მიცემა                         : active, b3, 2021-03-18
+    BANK - PSD2 სერვისების ინსტალაცია                              :crit, b4, 2021-03-18, 3d
+    ALTA - PSD2 სერვისების დატესტვა                               :b5, after b4, 2d
+    BANK - PSD2 სერვისების ინსტალაციის ხარვეზების გასწორება       :b6, after b4, 2d
+
+    BANK - EIDAS სერტიფიკატების შეძენა :crit, active, a6, 2021-03-18
+    BANK - GO LIVE READY :go, after b6, 4d
+
+
+    section B6O2
+    BANK - RabbitMQ დაყენება :crit, r1, 2021-03-01, 2d
+    BANK - B6.Pushing დაყენება :crit, r1, 2021-03-01, 2d
+    BANK - 1 Database-ის მომზადება : db3, 2021-03-01, 2d
+    
+    ALTA - B6O2-ის მუშა ვერსის მიცემა           :o1, 2021-03-06
+    BANK - B6O2-ის მიგრაცია (history)           :o2, after o1, 5d
+    BANK - B6O2-ის მიგრაციის ხარვეზების გასწორება :ob1, after o2, 2d
+    BANK - B6O2-ის მიგრაცია თავიდან (history)    :o3, after o2, 5d
+    BANK - B6O2-ის მიგრაცია (საბოლოო)           :o4, after o3, 1d
+    BANK - 1 ვირტუალური მანქანის მომზადება (16 GB RAM, 4 CPU): v4, 2021-03-01, 15d
+    BANK - B6O2-ის EventHandler-ის დაყენება      :crit, o5, after v4, 1d
+    BANK - B6O2-ის API-ის დაყენება               :crit, o6, after v4, 1d
+    ALTA - B6O2-ის ხარვეზების გასწორება          :ob2, after o5, 2d
+    BANK - GO LIVE READY :go, after ob2, 4d
