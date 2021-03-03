@@ -37,11 +37,21 @@
     1. Extract sandbox-auth-server-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authserver-sandbox``` folder
     1. Extract sandbox-auth-web-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authweb-sandbox``` folder
     1. Extract sandbox-xs2a-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\xs2a-sandbox``` folder
-    1. Go to each folder, find ```appsettings.json``` file, open it and fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database
-    ```json
-    "Database": {
-        "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
-    }
+    1. Go to each folder, find ```appsettings.json``` file, open it and:
+        1. Fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database
+        ```json
+        "Database": {
+            "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
+        }
+        ```
+        1. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
+        ```json
+        "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
+        ```
+            * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
+            * It should have private key.
+            * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://send.altasoft.ge/download.php?id=76&token=5bxpjxHMkTrfsVVzCXx87gafRj2c7OTi). Password is: ```123456```. Install it as ```Trusted Root``` certificate
+
     ```
     1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://authserver-sandbox-psd2.yourdomain.ge```
     ```json
@@ -52,10 +62,14 @@
 
     1. Go to each folder, find hosting.json file, open it and write this:
 
-    ```json
-    "HostingType": "Iis",
-    "InstanceId": 1
-    ```
+        1. If you ```don't have``` load balancer in front of IIS
+            ```json
+            "HostingType": "iis",
+            ```
+        2. If you ```have``` load balancer in front of IIS
+            ```json
+            "HostingType": "load_balancer",
+            ```
 
 1. ## Install PSD2 Developer Portal and Sandbox aplications in IIS
 
