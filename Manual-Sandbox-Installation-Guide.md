@@ -9,7 +9,7 @@
 
     For more detailed instructions on how to install the ASP.NET Core Module, see [Install the .NET Core Hosting Bundle.](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-5.0)
 
-1. ## Install SQL Server Express (2016+)
+1. ## Install SQL Server Express (2016+) or you can use existing SQL server (Enterprise)
 
     1. Download the installer using the following link:
         [Latest SQL Server Express installer direct download](https://go.microsoft.com/fwlink/?linkid=866658)
