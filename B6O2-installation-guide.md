@@ -13,9 +13,9 @@
 
 1. ## გაამზადეთ B6O2
     1. გადმოწერეთ b6o2-ის ფაილები
-        1. B6O2_Migration.zip [Direct download](http://psd2files.altasoft.ge/B6O2.Lite/B6O2_Migration.zip)
-        1. B602_EventHandler.zip [Direct download](http://psd2files.altasoft.ge/B6O2.Lite/B6O2_EventHandler.zip)
-        1. B6O2_Api.zip [Direct download](http://psd2files.altasoft.ge/B6O2.Lite/B6O2_Api.zip)
+        1. B6O2_Migration.zip [Direct download](https://psd2files.altasoft.ge/B6O2.Lite/B6O2_Migration.zip)
+        1. B602_EventHandler.zip [Direct download](https://psd2files.altasoft.ge/B6O2.Lite/B6O2_EventHandler.zip)
+        1. B6O2_Api.zip [Direct download](https://psd2files.altasoft.ge/B6O2.Lite/B6O2_Api.zip)
 
     1. გახსენით ```B6O2_Migration.zip``` ფაილი ```\B6O2\Migration``` ფოლდერში
     1. გახსენით ```B6O2_EventHandler.zip``` ფაილი ```\B6O2\EventHandler``` ფოლდერში
