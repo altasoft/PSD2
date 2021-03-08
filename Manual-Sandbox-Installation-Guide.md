@@ -9,8 +9,9 @@
 
     For more detailed instructions on how to install the ASP.NET Core Module, see [Install the .NET Core Hosting Bundle.](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-5.0)
 
-1. ## Install SQL Server Express (2016+) or you can use existing SQL server (Enterprise)
-
+1. ## (Conditional) Install SQL Server Express (2016+) or you can use existing SQL server (Enterprise)
+    1. If you are using PSD2 DataAccess Api, then skip this step and install DataAccess Api instead [DataAccess Installation Guide](https://github.com/altasoft/PSD2/blob/main/DataAccess-Installation-Guide.md)
+    
     1. Download the installer using the following link:
         [Latest SQL Server Express installer direct download](https://go.microsoft.com/fwlink/?linkid=866658)
     
@@ -27,8 +28,7 @@
 
 1. ## Download latest versions of PSD2 Developer Portal and Sandbox binaries
 
-    You can download it from our support portal 
-     [Alta Software Support Site](https://jira.altasoft.ge/)
+    You can download it from our support portal [Alta Software Support Site](https://jira.altasoft.ge/). Go to PSD2 folder.
 
 1. ## Extract PSD2 Developer Portal and Sandbox aplications in IIS folders
     
@@ -38,16 +38,26 @@
     1. Extract sandbox-auth-web-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authweb-sandbox``` folder
     1. Extract sandbox-xs2a-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\xs2a-sandbox``` folder
     1. Go to each folder, find ```appsettings.json``` file, open it and:
-        1. Fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database
-        ```json
-        "Database": {
-            "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
-        }
-        ```
+        1. If you are ***not using*** PSD2 DataAccess Api, then fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database. Delete ```DataAccess``` section, it is only required when using PSD2 DataAccess Api.
+            ```json
+            "Database": {
+                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
+            }
+            ```
+
+        1. If you are ***using*** PSD2 DataAccess Api, then fill ```DataAccess``` section with address of installed DataAccess Api. Fill ```UserName``` and ```Password``` with credentials entered in PSD2 DataAccess Api configuration. Delete ```Database:ConnectionString``` section, it is only required when using direct access to PSD2 database.
+            ```json
+            "DataAccess": {
+                "Url": "https://localhost:15011",
+                "UserName": "User",
+                "Password": "Password"
+            }
+            ```
+
         2. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
-        ```json
-        "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
-        ```
+            ```json
+            "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
+            ```
 
         * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
         * It should have private key.
