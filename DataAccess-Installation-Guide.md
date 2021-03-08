@@ -28,13 +28,24 @@
     
     1. Create folder for PSD2 applications, i.e. ```C:\Inetpub\PSD2```
     1. Extract PSD2_DataAccess.zip to ```C:\Inetpub\PSD2\DataAccess``` folder
-    1. Go to folder, where you extracted ```PSD2_DataAccess.zip```, find ```appsettings.json``` file, open it and fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database.
+    1. Go to folder, where you extracted ```PSD2_DataAccess.zip```, find ```appsettings.json``` file, open it and:
+    
+        1. Fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database.
 
-        ```json
-        "Database": {
-            "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2.DataAccess"
-        }
-        ```
+            ```json
+            "Database": {
+                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2.DataAccess"
+            }
+            ```
+
+        1. Fill ```Authentication``` section with username and password. This username and password will be used for basic authentication
+
+            ```json
+            "Authentication": {
+                "UserName": "User",
+                "Password": "Password"
+            }
+            ```
 
 1. ## Install PSD2 DataAccess in IIS
 
