@@ -53,12 +53,25 @@
         ```
 
 1. ## დაამიგრირეთ არქივული ტრანზაქციები
-    1. შედით ```Migration``` ფოლდერში, გახსენით ```appsettings.json``` ფაილი ნებისმიერი ტექსტური რედაქტორით და ```Settings``` სექციაში ჩაწერეთ ```StartYear``` პარამეტრი. ეს არის წელი, რომლიდანაც დაიწყება მონაცემების მოიგრაცია.
-        ```json
-        "Settings": {
-            "StartYear": 2020
-        }
-        ```
+    1. შედით ```Migration``` ფოლდერში, გახსენით ```appsettings.json``` ფაილი ნებისმიერი ტექსტური რედაქტორით და:
+        1. ```Settings``` სექციაში ჩაწერეთ ```StartYear``` პარამეტრი. ეს არის წელი, რომლიდანაც დაიწყება მონაცემების მოიგრაცია.
+            ```json
+            "Settings": {
+                "StartYear": 2020
+            }
+            ```
+        1. ```Settings``` სექციაში ჩაწერეთ ```B6ConnectionString``` პარამეტრი. ეს არის B6 მონაცემთა ბაზის ConnectionString. საჭიროა, რომ მიგრაციამ მაქედან გადმოიტანოს მონაცემები.
+            ```json
+            "Settings": {
+                "B6ConnectionString": "Data Source=SQL;Initial Catalog=BANK2000;User Id=b2000;Password=1234;Max Pool Size=200;Application Name=AltaSoft.B6O2.Migration"
+            }
+            ```
+        1. ```Settings``` სექციაში ჩაწერეთ ```CardsConnectionString``` პარამეტრი. ეს არის CARDS2011 მონაცემთა ბაზის ConnectionString. საჭიროა, რომ მიგრაციამ მაქედან გადმოიტანოს მონაცემები. თუ არ გაქვთ ეს პროდუქტი, უბრალოდ ამოშალეთ ეს ჩანაწერი.
+            ```json
+            "Settings": {
+                "CardsConnectionString": "Data Source=SQL;Initial Catalog=BANK2000;User Id=b2000;Password=1234;Max Pool Size=200;Application Name=AltaSoft.B6O2.Migration"
+            }
+            ```
     1. Windows-ის command line-იდან გაუშვით შემდეგი ბრძანება
         ```
             _migrate_transaction_arc.bat 
