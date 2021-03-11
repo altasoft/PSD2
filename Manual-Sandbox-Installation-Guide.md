@@ -54,7 +54,7 @@
             }
             ```
 
-        2. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
+        1. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
             ```json
             "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
             ```
