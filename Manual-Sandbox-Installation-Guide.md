@@ -143,7 +143,7 @@
             ![Image](../main/Images/SslSettings.png)
 
             1. Select ```Require SSL```
-            1. Select ```Require``` in ```Client certificates```
+            1. Select ```Accept``` in ```Client certificates```
         1. Press ```Apply``` button
             
         #### OAuth2 Server Web
