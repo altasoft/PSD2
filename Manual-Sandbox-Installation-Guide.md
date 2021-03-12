@@ -2,6 +2,8 @@
 
 1. ## Install IIS 10
 
+1. ## Install your SSL certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
+
 1. ## Install the ASP.NET Core Module/Hosting Bundle
 
     Download the installer using the following link:
