@@ -28,7 +28,7 @@
 
         * Fill SQL connection string for SQL server, where PSD2 database will be created. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database *(You can use Sql connection string dialog by pressing '...' button)*
         * Fill your QSealC certificates thumbprint and press 'Next' button *(You can use Select Certificate dialog by pressing '...' button)*
-            * Your QSealC certificate should be installed in ```Windows Certificate Store```-s ```Trusted root certificate authorities```  with store location = ```Local Machine```. 
+            * Your QSealC certificate should be installed in ```Windows Certificate Store```-s ```Personal``` folder  with store location = ```Local Machine```. 
             * It should have private key.
             * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://psd2files.altasoft.ge/alta_aspsp_QsealC.zip). Password is: ```123456```. Install it as ```Trusted Root``` certificate
 
