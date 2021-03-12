@@ -54,6 +54,6 @@
 1. ## დააყენეთ b6.pushing Windows Service-ად და გაუშვით
     1. Windows-ის command line-იდან გაუშვით შემდეგი ბრძანება:
         ```
-            sc create B6.Pushing binPath= "\B6.Pushing\B6.Pushing.exe"
+            sc create B6.Pushing binPath= "C:\B6.Pushing\B6.Pushing.PSD2.exe"
             sc start B6.Pushing
         ```
