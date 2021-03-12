@@ -61,7 +61,7 @@
             "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
             ```
 
-        * Your QSealC certificate should be installed in ```Windows Certificate Store``` with store location = ```Local Machine```. 
+        * Your QSealC certificate should be installed in ```Windows Certificate Store```-s ```Personal``` folder with store location = ```Local Machine```. 
         * It should have private key.
         * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://send.altasoft.ge/download.php?id=76&token=5bxpjxHMkTrfsVVzCXx87gafRj2c7OTi). Password is: ```123456```. Install it as ```Trusted Root``` certificate
 
