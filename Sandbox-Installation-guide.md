@@ -4,6 +4,17 @@
 
 1. ## Install your SSL certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
 
+1. ## If you have own QSealC compatible private certificate
+    Install it in ```Personal``` with store location = ```Local Machine```. It MUST have private key.
+
+1. ## If you do not have own QSealC compatible private certificate
+ 
+    1. Install AltaSoft PSD2 root certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
+        You can download from here: [AltaSoft PSD2 certificate direct download](https://psd2files.altasoft.ge/altasoftPsd2RootCa.zip). Password is: ```123456```.
+ 
+    2. Install AltaSoft PSD2 Test QCealC  certificate in ```Personal``` with store location = ```Local Machine```. 
+        You can download from here: [AltaSoft PSD2 certificate direct download](https://psd2files.altasoft.ge/alta_aspsp_QsealC.zip). Password is: ```123456```.
+
 1. ## Install the ASP.NET Core Module/Hosting Bundle
 
     Download the installer using the following link:
@@ -33,9 +44,6 @@
         * If you selected ```SQL Server```, then fill SQL connection string for SQL server, where PSD2 database will be created. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database *(You can use Sql connection string dialog by pressing '...' button)*
         * If you selected ```DataAccess API```, then fill DataAccess API-s URL and aslo Username and password for basic authentication
         * Fill your QSealC certificates thumbprint and press 'Next' button *(You can use Select Certificate dialog by pressing '...' button)*
-            * Your QSealC certificate should be installed in ```Windows Certificate Store```-s ```Personal``` folder with store location = ```Local Machine```. 
-            * It should have private key.
-            * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://psd2files.altasoft.ge/alta_aspsp_QsealC.zip). Password is: ```123456```. Install it as ```Trusted Root``` certificate
 
         ![Image](../main/Images/Installer-sql-dialog.png)
 

@@ -4,6 +4,17 @@
 
 1. ## Install your SSL certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
 
+1. ## If you have own QSealC compatible private certificate
+    Install it in ```Personal``` with store location = ```Local Machine```. It MUST have private key.
+
+1. ## If you do not have own QSealC compatible private certificate
+ 
+    1. Install AltaSoft PSD2 root certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
+        You can download from here: [AltaSoft PSD2 certificate direct download](https://psd2files.altasoft.ge/altasoftPsd2RootCa.zip). Password is: ```123456```.
+ 
+    2. Install AltaSoft PSD2 Test QCealC  certificate in ```Personal``` with store location = ```Local Machine```. 
+        You can download from here: [AltaSoft PSD2 certificate direct download](https://psd2files.altasoft.ge/alta_aspsp_QsealC.zip). Password is: ```123456```.
+
 1. ## Install the ASP.NET Core Module/Hosting Bundle
 
     Download the installer using the following link:
@@ -35,10 +46,15 @@
 1. ## Extract PSD2 Developer Portal and Sandbox aplications in IIS folders
     
     1. Create folder for PSD2 sandbox applications, i.e. ```C:\Inetpub\PSD2```
+  
     1. Extract sandbox-portal-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\portal``` folder
+  
     1. Extract sandbox-auth-server-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authserver-sandbox``` folder
+  
     1. Extract sandbox-auth-web-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\authweb-sandbox``` folder
+  
     1. Extract sandbox-xs2a-BBBBBBBB-x.x.x.zip to ```C:\Inetpub\PSD2\xs2a-sandbox``` folder
+  
     1. Go to each folder, find ```appsettings.json``` file, open it and:
         1. If you are ***not using*** PSD2 DataAccess Api, then fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database. Delete ```DataAccess``` section, it is only required when using PSD2 DataAccess Api.
             ```json
@@ -56,31 +72,25 @@
             }
             ```
 
-        1. Fill ```"CertificateThumbprint``` with your QSealC certificates thumbprint
+        1. Fill ```"CertificateThumbprint``` with your QSealC certificate's thumbprint
             ```json
             "CertificateThumbprint": "9c3f0b85333b72379963e610e1d95c94d4fa5166"
             ```
-
-        * Your QSealC certificate should be installed in ```Windows Certificate Store```-s ```Personal``` folder with store location = ```Local Machine```. 
-        * It should have private key.
-        * If you do not have QSealC compatible private certificate, for testing purposes, you can use this: [Test certificate direct download](https://send.altasoft.ge/download.php?id=76&token=5bxpjxHMkTrfsVVzCXx87gafRj2c7OTi). Password is: ```123456```. Install it as ```Trusted Root``` certificate
-
    
-    1. Open ```C:\Inetpub\PSD2\portal\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://psd2-authserver-sandbox.yourdomain.ge```
+        2. If you ```have``` load balancer in front of IIS
+            ```json
+            "HostingType": "load_balancer"
+            ```
+
+    1. Open ```C:\Inetpub\PSD2\xs2a-sandbox\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://psd2-authserver-sandbox.yourdomain.ge```
         ```json
         "OAuth2ServerBaseUrl": "https://psd2-authserver-sandbox.yourdomain.ge"
         ```
 
-    1. Go to each folder, find hosting.json file, open it and write this:
-
-        1. If you ```don't have``` load balancer in front of IIS
-            ```json
-            "HostingType": "iis",
-            ```
-        2. If you ```have``` load balancer in front of IIS
-            ```json
-            "HostingType": "load_balancer",
-            ```
+    1. Open ```C:\Inetpub\PSD2\authweb-sandbox\appsettings.json``` and fill ```OAuth2WebBaseUrl ``` parameter with this ```https://psd2-authweb-sandbox.yourdomain.ge```
+        ```json
+        "OAuth2WebBaseUrl": "https://psd2-authweb-sandbox.yourdomain.ge"
+        ```
 
 1. ## Install PSD2 Developer Portal and Sandbox aplications in IIS
 
