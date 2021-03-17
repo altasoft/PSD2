@@ -97,19 +97,19 @@
 
         #### OAuth2 Server API
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-        1. Enter ```AltaSoft.PSD2.AuthServer_AppPool``` into ```name``` field
+        1. Enter ```AltaSoft.PSD2.AuthServer.Sandbox_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
         #### OAuth2 Server Web
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-        1. Enter ```AltaSoft.PSD2.AuthWeb_AppPool``` into ```name``` field
+        1. Enter ```AltaSoft.PSD2.AuthWeb.Sandbox_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
         #### XS2A API
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-        1. Enter ```AltaSoft.PSD2.XS2A_AppPool``` into ```name``` field
+        1. Enter ```AltaSoft.PSD2.XS2A.Sandbox_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
 
@@ -133,8 +133,8 @@
 
         #### OAuth2 Server API
         1. Select ```Sites```, right click it and select ```Add Website...```
-        1. Enter ```AltaSoft.PSD2.AuthServer``` into ```Site name``` field
-        1. Select ```AltaSoft.PSD2.AuthServer_AppPool``` in ```Application pool``` field
+        1. Enter ```AltaSoft.PSD2.AuthServer.Sandbox``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.AuthServer.Sandbox_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\authserver-sandbox``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
         1. Enter ```psd2-authserver-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
@@ -150,8 +150,8 @@
             
         #### OAuth2 Server Web
         1. Select ```Sites```, right click it and select ```Add Website...```
-        1. Enter ```AltaSoft.PSD2.AuthWeb``` into ```Site name``` field
-        1. Select ```AltaSoft.PSD2.AuthWeb_AppPool``` in ```Application pool``` field
+        1. Enter ```AltaSoft.PSD2.AuthWeb.Sandbox``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.AuthWeb.Sandbox_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\authweb-sandbox``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
         1. Enter ```psd2-authweb-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
@@ -160,8 +160,8 @@
 
         #### XS2A API
         1. Select ```Sites```, right click it and select ```Add Website...```
-        1. Enter ```AltaSoft.PSD2.XS2A``` into ```Site name``` field
-        1. Select ```AltaSoft.PSD2.xs2a-sandbox``` in ```Application pool``` field
+        1. Enter ```AltaSoft.PSD2.XS2A.Sandbox``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.XS2A.Sandbox_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\xs2a-sandbox``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field
         1. Enter ```psd2-xs2a-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
