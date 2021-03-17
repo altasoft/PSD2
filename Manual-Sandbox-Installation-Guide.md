@@ -87,7 +87,7 @@
         "OAuth2ServerBaseUrl": "https://psd2-authserver-sandbox.yourdomain.ge"
         ```
 
-    1. Open ```C:\Inetpub\PSD2\authweb-sandbox\appsettings.json``` and fill ```OAuth2WebBaseUrl ``` parameter with this ```https://psd2-authweb-sandbox.yourdomain.ge```
+    1. Open ```C:\Inetpub\PSD2\authserver-sandbox\appsettings.json``` and fill ```OAuth2WebBaseUrl ``` parameter with this ```https://psd2-authweb-sandbox.yourdomain.ge```
         ```json
         "OAuth2WebBaseUrl": "https://psd2-authweb-sandbox.yourdomain.ge"
         ```
@@ -185,15 +185,6 @@
             1. Select ```Accept``` in ```Client certificates```
         1. Press ```Apply``` button
 
-    1. Install altasoftPsd2RootCa.crt
-
-        1. In File Explorer, goto ```C:\Inetpub\PSD2\portal\Certificates``` folder, locate file ```altasoftPsd2RootCa.crt```
-        1. Right click it and press ```Install Certificate```
-        1. In ```Store Location``` select ```Local Machine``` and press ```Next``` button
-        1. Select ```Place all certificates in the following store``` and press ```Browse``` button
-        1. Select ```Trusted Root Certification Authorities``` and press ```Next``` button
-        1. Press ```OK``` button
-
-
+ 
     1.  That's it. :smiley:
         * Check that everything is working as expected
