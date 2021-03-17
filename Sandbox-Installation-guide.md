@@ -22,13 +22,16 @@
         ![Image](../main/Images/Installer-login.png)
 
         * Fill Bank BIC code - Your bank's 9 digit SWIFT BIC code
-        * Type your password and then press 'Next' button
+        * Select Sandbox or Real
+        * Type your password (1234) and then press 'Next' button
 
     1.  Now you will see the Database and Certificate screen:
 
         ![Image](../main/Images/Installer-sql.png)
 
-        * Fill SQL connection string for SQL server, where PSD2 database will be created. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database *(You can use Sql connection string dialog by pressing '...' button)*
+        * Select ```SQL Server``` or ```DataAccess API```
+        * If you selected ```SQL Server```, then fill SQL connection string for SQL server, where PSD2 database will be created. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database *(You can use Sql connection string dialog by pressing '...' button)*
+        * If you selected ```DataAccess API```, then fill DataAccess API-s URL and aslo Username and password for basic authentication
         * Fill your QSealC certificates thumbprint and press 'Next' button *(You can use Select Certificate dialog by pressing '...' button)*
             * Your QSealC certificate should be installed in ```Windows Certificate Store```-s ```Personal``` folder with store location = ```Local Machine```. 
             * It should have private key.
