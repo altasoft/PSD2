@@ -2,7 +2,7 @@
 
 1. ## Install IIS 10
 
-1. ## Install your SSL certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
+1. ## Install your SSL certificate in ```Personal``` with store location = ```Local Machine```. 
 
 1. ## If you have own QSealC compatible private certificate
     Install it in ```Personal``` with store location = ```Local Machine```. It MUST have private key.
