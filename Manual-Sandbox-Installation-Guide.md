@@ -2,6 +2,13 @@
 
 1. ## Install IIS 10
 
+1. ## Disable weak protocols, cipher suites and hashing algorithms
+    Please read this: 
+        [Transport Layer Security (TLS) registry settings](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
+
+    and this
+        [Manage Transport Layer Security (TLS)](https://docs.microsoft.com/en-us/windows-server/security/tls/manage-tls)
+
 1. ## Install your SSL certificate in ```Personal``` with store location = ```Local Machine```. 
 
 1. ## If you have own QSealC compatible private certificate
