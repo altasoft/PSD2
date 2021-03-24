@@ -3,7 +3,9 @@
 1. ## Install IIS 10
 
 1. ## Delete all non root certificates from ```Trusted root certificates```
-    https://docs.microsoft.com/en-us/troubleshoot/iis/http-403-forbidden-open-webpage
+    You should delete any certificate whose ```Issued by``` and ```Issued to``` values are not the same (and therefore the certificate is not at the top of the hierarchy).
+    
+    Plese see this: https://docs.microsoft.com/en-us/troubleshoot/iis/http-403-forbidden-open-webpage
 
 1. ## Disable weak protocols, cipher suites and hashing algorithms
     Please read this: 
