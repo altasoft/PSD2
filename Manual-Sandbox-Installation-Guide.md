@@ -2,6 +2,9 @@
 
 1. ## Install IIS 10
 
+1. ## Delete all non root certificates from ```Trusted root certificates```
+    https://docs.microsoft.com/en-us/troubleshoot/iis/http-403-forbidden-open-webpage
+
 1. ## Disable weak protocols, cipher suites and hashing algorithms
     Please read this: 
         [Transport Layer Security (TLS) registry settings](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
@@ -105,30 +108,56 @@
     1. Create Application Pools
         
         ![Image](../main/Images/EditAppPool.png)
+        
+        ![Image](../main/Images/AppPoolAdvanced.png)
 
         #### Developer Portal
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
         1. Enter ```AltaSoft.PSD2.DeveloperPortal_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        1. Press ```OK```
+        1. Select newly created application pool, right click it and select ```Advanced Settings...```
+        1. Set ```General\Start mode``` to ```AlwaysRunning```
+        1. Set ```Process Model\Identity``` to ```LocalSystem```
+        1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
 
         #### OAuth2 Server API
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
         1. Enter ```AltaSoft.PSD2.AuthServer.Sandbox_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        1. Press ```OK```
+        1. Select newly created application pool, right click it and select ```Advanced Settings...```
+        1. Set ```General\Start mode``` to ```AlwaysRunning```
+        1. Set ```Process Model\Identity``` to ```LocalSystem```
+        1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
 
         #### OAuth2 Server Web
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
         1. Enter ```AltaSoft.PSD2.AuthWeb.Sandbox_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        1. Press ```OK```
+        1. Select newly created application pool, right click it and select ```Advanced Settings...```
+        1. Set ```General\Start mode``` to ```AlwaysRunning```
+        1. Set ```Process Model\Identity``` to ```LocalSystem```
+        1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
 
         #### XS2A API
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
         1. Enter ```AltaSoft.PSD2.XS2A.Sandbox_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
+        1. Press ```OK```
+        1. Select newly created application pool, right click it and select ```Advanced Settings...```
+        1. Set ```General\Start mode``` to ```AlwaysRunning```
+        1. Set ```Process Model\Identity``` to ```LocalSystem```
+        1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
 
     1. Create Web Sites
 
@@ -147,6 +176,8 @@
         1. Select ```http``` in ```Type``` field
         1. Enter ```psd2-portal.yourdomain.ge``` in ```Host name``` field
         1. Press ```OK```
+        1. Right click the site it and select ```Manage website\Advanced Settings...```
+        1. Set ```General\Preload Enabled``` to  ```True```
 
         #### OAuth2 Server API
         1. Select ```Sites```, right click it and select ```Add Website...```
@@ -164,6 +195,9 @@
             1. Select ```Require SSL```
             1. Select ```Accept``` in ```Client certificates```
         1. Press ```Apply``` button
+        1. Right click the site it and select ```Manage website\Advanced Settings...```
+        1. Set ```General\Preload Enabled``` to  ```True```
+
             
         #### OAuth2 Server Web
         1. Select ```Sites```, right click it and select ```Add Website...```
@@ -174,6 +208,9 @@
         1. Enter ```psd2-authweb-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
         1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
         1. Press ```OK```
+        1. Right click the site it and select ```Manage website\Advanced Settings...```
+        1. Set ```General\Preload Enabled``` to  ```True```
+
 
         #### XS2A API
         1. Select ```Sites```, right click it and select ```Add Website...```
@@ -191,6 +228,8 @@
             1. Select ```Require SSL```
             1. Select ```Accept``` in ```Client certificates```
         1. Press ```Apply``` button
+        1. Right click the site it and select ```Manage website\Advanced Settings...```
+        1. Set ```General\Preload Enabled``` to  ```True```
 
  
     1.  That's it. :smiley:
