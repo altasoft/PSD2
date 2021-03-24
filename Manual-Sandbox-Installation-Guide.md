@@ -121,7 +121,7 @@
         1. Set ```General\Start mode``` to ```AlwaysRunning```
         1. Set ```Process Model\Identity``` to ```LocalSystem```
         1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
-        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```False```
 
         #### OAuth2 Server API
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
@@ -133,7 +133,7 @@
         1. Set ```General\Start mode``` to ```AlwaysRunning```
         1. Set ```Process Model\Identity``` to ```LocalSystem```
         1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
-        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```False```
 
         #### OAuth2 Server Web
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
@@ -145,7 +145,7 @@
         1. Set ```General\Start mode``` to ```AlwaysRunning```
         1. Set ```Process Model\Identity``` to ```LocalSystem```
         1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
-        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```False```
 
         #### XS2A API
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
@@ -157,7 +157,7 @@
         1. Set ```General\Start mode``` to ```AlwaysRunning```
         1. Set ```Process Model\Identity``` to ```LocalSystem```
         1. Set ```Process Model\Idle Time-out (minutes)``` to ```0```
-        1. Set ```Recycling\Disable Overlapped Recycle``` to ```0```
+        1. Set ```Recycling\Disable Overlapped Recycle``` to ```False```
 
     1. Create Web Sites
 
