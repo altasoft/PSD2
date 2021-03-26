@@ -84,7 +84,7 @@
 
         ![Image](../main/Images/Installer-ssl-cert.png)
 
-1.  ## !!! Temporary, until real certificates will be available !!!
+<!-- 1.  ## !!! Temporary, until real certificates will be available !!!
     Go to each folder (except authweb-sandbox), find ```appsettings.json``` file, open it and and fill ```RootCertificateThumbprints``` parameter with thumbprints of all PSD2 root certificates.
         
     Include your root PSD2 certificate (Generated according to [Banking association of Georgia document](https://bitbucket.org/obgeo/development-ca/src/master/))
@@ -96,7 +96,7 @@
     ```json
     "RootCertificateThumbprints": "e06aed78542ee8a994c229489c6e31909e7e6441,F9AA2ABAD10F448F7F3759AA4B3798ED19A0CCDD"
     ```
-
+ -->
 
 1.  That's it. :smiley:
     * Check that everything is working as expected
