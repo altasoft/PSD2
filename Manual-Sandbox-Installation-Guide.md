@@ -90,7 +90,9 @@
             ```json
             "HostingType": "load_balancer"
             ```
-
+            
+            You should configure your Load Balancer for MTLS and certificate forwarding in http header with name ```X-ARR-ClientCert```
+            
     1. Open ```C:\Inetpub\PSD2\xs2a-sandbox\appsettings.json``` and fill ```OAuth2ServerBaseUrl``` parameter with this ```https://psd2-authserver-sandbox.yourdomain.ge```
         ```json
         "OAuth2ServerBaseUrl": "https://psd2-authserver-sandbox.yourdomain.ge"
