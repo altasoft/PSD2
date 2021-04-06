@@ -14,18 +14,15 @@
     and this
         [Manage Transport Layer Security (TLS)](https://docs.microsoft.com/en-us/windows-server/security/tls/manage-tls)
 
-1. ## Install your SSL certificate in ```Personal``` with store location = ```Local Machine```. 
+1. ## Install Banking Associacion of Georgia-s root certificate in ```Trusted Root Certification Authorities``` with store location = ```Local Machine```.
 
-1. ## If you have own QSealC compatible private certificate
-    Install it in ```Personal``` with store location = ```Local Machine```. It MUST have private key.
+1. ## Install Banking Associacion of Georgia-s sub root certificates (WAC and SEAL) in ```Intermediary Certification Authorities``` with store location = ```Local Machine```.
 
-1. ## If you do not have own QSealC compatible private certificate
- 
-    1. Install AltaSoft PSD2 root certificate in ```Trusted root certificate authorities``` with store location = ```Local Machine```. 
-        You can download from here: [AltaSoft PSD2 certificate direct download](https://psd2files.altasoft.ge/altasoftPsd2RootCa.zip). Password is: ```123456```.
- 
-    2. Install AltaSoft PSD2 Test QCealC  certificate in ```Personal``` with store location = ```Local Machine```. 
-        You can download from here: [AltaSoft PSD2 certificate direct download](https://psd2files.altasoft.ge/alta_aspsp_QsealC.zip). Password is: ```123456```.
+1. ## Install your SSL certificate (i.e. ```*.yourdomain.ge```) in ```Personal``` with store location = ```Local Machine```. 
+
+1. ## Install your QWAC compatible certificate (i.e. ```*.yourdomain.ge```) in ```Personal``` with store location = ```Local Machine```. 
+
+1. ## Install your QSealC compatible certificate in ```Personal``` with store location = ```Local Machine```. It MUST have private key.
 
 1. ## Install the ASP.NET Core Module/Hosting Bundle
 
