@@ -46,7 +46,7 @@
         1.  Fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_TPP``` database. 
             ```json
             "Database": {
-                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
+                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_TPP;Integrated Security=true;Application Name=AltaSoft.PSD2.TPP"
             }
             ```
 
@@ -59,7 +59,7 @@
 
             ```
    
-        2. Fill ```ValidateServerQwac``` with true for production environment (checks if xs2a has correct Qwac certificate as ssl)
+        2. Fill ```ValidateServerQwac``` with true for production environment (checks if xs2a has correct Qwac certificate for ssl)
             
         3. ```AisProviderSettings ``` is the urls for ASPSP adjust as required   
   
@@ -72,7 +72,7 @@
         1.  Fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_TPP``` database. 
             ```json
             "Database": {
-                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
+                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_TPP;Integrated Security=true;Application Name=AltaSoft.PSD2.TPP"
             }
             ```
 
@@ -84,7 +84,7 @@
                  "QSealC": "eb80f741219f38ccc1e18519be7a789efe5328db"
 
             ```
-        1. Fill ```"IBankOptions``` with your Internet bank Not Ok url (where we will send you that an error occured)
+        1. Fill ```"IBankOptions``` with your Internet bank Not Ok url (where we will send you that an error occured if something unexpected happens)
             ```json
                  "NokRedirectUri": "f877665bf66ff3e5fe5810c37c7280543af9bec8",
             ```
