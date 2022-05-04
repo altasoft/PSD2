@@ -1,4 +1,4 @@
-# Alta Software PSD2 Internal API Installation Guide for IIS
+# Alta Software PSD2 StandartProducts API Installation Guide for IIS
 
 1. ## Install IIS 10
 
