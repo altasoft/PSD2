@@ -1,4 +1,4 @@
-# Alta Software PSD2 StandartProducts API Installation Guide for IIS
+# Alta Software PSD2 StandardProducts API Installation Guide for IIS
 
 1. ## Install IIS 10
 
@@ -10,11 +10,11 @@
     For more detailed instructions on how to install the ASP.NET Core Module, see [Install the .NET Core Hosting Bundle.](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-5.0)
 
     
-1. ## Download AltaSoft StandartProducts API 
+1. ## Download AltaSoft StandardProducts API 
 
-1. ## Extract AltaSoft StandartProducts API in IIS folders
+1. ## Extract AltaSoft StandardProducts API in IIS folders
     
-    1. Extract AltaSoft StandartProducts API to ```C:\Inetpub\PSD2\StandartProducts``` folder
+    1. Extract AltaSoft StandardProducts API to ```C:\Inetpub\PSD2\StandardProducts``` folder
 
     1. Go to folder find ```appsettings.json``` file, open it and:
         1.  If needed Modify ProductData section
@@ -26,12 +26,12 @@
         }
         ```
   
-1. ## Install PSD2 StandartProducts API
+1. ## Install PSD2 StandardProducts API
 
     1. Go to Internet Information Services (IIS) Manager
     1. Create Application Pools
         1. Select ```Application Pools```, right click it and select ```Add Application Pool...```
-        1. Enter ```AltaSoft.PSD2.StandartProducts_AppPool``` into ```name``` field
+        1. Enter ```AltaSoft.PSD2.StandardProducts_AppPool``` into ```name``` field
         1. Select ```No Managed Code``` in ```.NET CLR version``` field
         1. Select ```Integrated``` in ```Managed pipeline mode``` field
         1. Press ```OK```
@@ -45,11 +45,11 @@
 
     1. Create Web Site. 
 
-        #### StandartProducts  **must not be accessible to public**
+        #### StandardProducts  **must not be accessible to public**
         1. Select ```Sites```, right click it and select ```Add Website...```
-        1. Enter ```AltaSoft.PSD2.StandartProducts``` into ```Site name``` field
-        1. Select ```AltaSoft.PSD2.StandartProducts_AppPool``` in ```Application pool``` field
-        1. Enter ```C:\Inetpub\PSD2\StandartProducts``` into ```Physical path``` field
+        1. Enter ```AltaSoft.PSD2.StandardProducts``` into ```Site name``` field
+        1. Select ```AltaSoft.PSD2.StandardProducts_AppPool``` in ```Application pool``` field
+        1. Enter ```C:\Inetpub\PSD2\StandardProducts``` into ```Physical path``` field
         1. Select ```https``` in ```Binding: Type``` field or http can be used as well
         1. Select correct SSL Certificate for website
         1. Press ```OK```
