@@ -45,12 +45,10 @@
 
     1. Create Web Site. 
 
-        #### StandardProducts  **must not be accessible to public**
         1. Select ```Sites```, right click it and select ```Add Website...```
         1. Enter ```AltaSoft.PSD2.StandardProducts``` into ```Site name``` field
         1. Select ```AltaSoft.PSD2.StandardProducts_AppPool``` in ```Application pool``` field
         1. Enter ```C:\Inetpub\PSD2\StandardProducts``` into ```Physical path``` field
-        1. Select ```https``` in ```Binding: Type``` field or http can be used as well
         1. Select correct SSL Certificate for website
         1. Press ```OK```
         1. Select newly created site, right click it and select ```Edit Bindings...```
