@@ -10,8 +10,8 @@
         1.  ```DbProviders``` სექციაში ჩაწერეთ ```B6``` და ```PCards``` ელემენტებში მონაცემთა ბაზის პარამეტრები
             ```json
             "DbProviders": {
-                "B6": "Data Source=Sql;Initial Catalog=BANK2000;Integrated Security=true;Application Name=B6.Pushing",
-                "PCards": "Data Source=Sql;Initial Catalog=CARDS2011;Integrated Security=true;Application Name=B6.Pushing"
+                "B6": "Data Source=Sql;Initial Catalog=BANK2000;Integrated Security=true;Application Name=B6.Pushing;Encrypt=false;TrustServerCertificate=true",
+                "PCards": "Data Source=Sql;Initial Catalog=CARDS2011;Integrated Security=true;Application Name=B6.Pushing;Encrypt=false;TrustServerCertificate=true"
             }
             ```
         
@@ -19,11 +19,11 @@
             ```json
             "BusProviders": {
                 "B6.Events": {
-                    "ConnectionString": "HostName=RabbitMq;VirtualHost=B6;UserName=username;Password=password;ClientProvidedName=B6.Pushing.Events",
+                    "ConnectionString": "HostName=RabbitMq;VirtualHost=B6;UserName=username;Password=password;ClientProvidedName=B6.Pushing.Events;Encrypt=false;TrustServerCertificate=true",
                     "TopicName": "B6.Events"
                 },
                 "B6.Transactions": {
-                    "ConnectionString": "HostName=RabbitMq;VirtualHost=B6;UserName=username;Password=password;ClientProvidedName=B6.Pushing.Transactions",
+                    "ConnectionString": "HostName=RabbitMq;VirtualHost=B6;UserName=username;Password=password;ClientProvidedName=B6.Pushing.Transactions;Encrypt=false;TrustServerCertificate=true",
                     "TopicName": "B6.Transactions"
                 }
             }
