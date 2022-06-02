@@ -2,11 +2,7 @@
 
 1. ## დააყენეთ RabbitMQ [Direct download](https://www.rabbitmq.com/download.html)
 1. ## გაამზადეთ B6.Pushing.Lite
-    1. გადმოწერეთ B6.Pushing.Lite-ის ფაილები
-        1. B6.Pushing.zip [Direct download](https://psd2files.altasoft.ge/B6.Pushing.Lite/B6.Pushing.zip)
-        1. B6_sql.zip [Direct download](https://psd2files.altasoft.ge/B6.Pushing.Lite/B6_sql.zip)
-        1. PCards_sql.zip [Direct download](https://psd2files.altasoft.ge/B6.Pushing.Lite/PCards_sql.zip)
-
+    
     1. გახსენით ```B6.Pushing.zip``` ფაილი ```\B6.Pushing``` ფოლდერში
     
     1. გახსენით ```appsettings.json``` ფაილი ნებისმიერი ტექსტური რედაქტორით და:
