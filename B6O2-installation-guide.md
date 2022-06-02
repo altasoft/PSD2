@@ -25,7 +25,7 @@
         1.  ```Database``` სექციაში ჩაწერეთ ```B6O2``` მონაცემთა ბაზის ```ConnectionString```
             ```json
             "Database": {
-                "ConnectionString": "Data Source=localhost;Initial Catalog=B6O2;Integrated Security=true;Application Name=B6O2"
+                "ConnectionString": "Data Source=localhost;Initial Catalog=B6O2;Integrated Security=true;Application Name=B6O2;Encrypt=false;TrustServerCertificate=true"
             }
             ```
 
@@ -33,7 +33,7 @@
             ```json
             "QueueProviders": {
                 "Default": {
-                    "ConnectionString": "HostName=RabbitMq;VirtualHost=B6;UserName=username;Password=password;ClientProvidedName=B6O2"
+                    "ConnectionString": "HostName=RabbitMq;VirtualHost=B6;UserName=username;Password=password;ClientProvidedName=B6O2;Encrypt=false;TrustServerCertificate=true"
                 }
             }
             ```
@@ -70,13 +70,13 @@
         1. ```Settings``` სექციაში ჩაწერეთ ```B6ConnectionString``` პარამეტრი. ეს არის B6 მონაცემთა ბაზის ConnectionString. საჭიროა, რომ მიგრაციამ მაქედან გადმოიტანოს მონაცემები.
             ```json
             "Settings": {
-                "B6ConnectionString": "Data Source=SQL;Initial Catalog=BANK2000;User Id=b2000;Password=1234;Max Pool Size=200;Application Name=AltaSoft.B6O2.Migration"
+                "B6ConnectionString": "Data Source=SQL;Initial Catalog=BANK2000;User Id=b2000;Password=1234;Max Pool Size=200;Application Name=AltaSoft.B6O2.Migration;Encrypt=false;TrustServerCertificate=true"
             }
             ```
         1. ```Settings``` სექციაში ჩაწერეთ ```CardsConnectionString``` პარამეტრი. ეს არის CARDS2011 მონაცემთა ბაზის ConnectionString. საჭიროა, რომ მიგრაციამ მაქედან გადმოიტანოს მონაცემები. თუ არ გაქვთ ეს პროდუქტი, უბრალოდ ამოშალეთ ეს ჩანაწერი.
             ```json
             "Settings": {
-                "CardsConnectionString": "Data Source=SQL;Initial Catalog=BANK2000;User Id=b2000;Password=1234;Max Pool Size=200;Application Name=AltaSoft.B6O2.Migration"
+                "CardsConnectionString": "Data Source=SQL;Initial Catalog=BANK2000;User Id=b2000;Password=1234;Max Pool Size=200;Application Name=AltaSoft.B6O2.Migration;Encrypt=false;TrustServerCertificate=true"
             }
             ```
     1. Windows-ის command line-იდან გაუშვით შემდეგი ბრძანება
