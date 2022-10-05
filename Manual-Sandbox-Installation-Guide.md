@@ -68,7 +68,7 @@
         1. If you are ***not using*** PSD2 DataAccess Api, then fill ```Database:ConnectionString``` section with database connection string. Database user ***must*** have ```db_owner``` rights on ```PSD2_Portal``` database. Delete ```DataAccess``` section, it is only required when using PSD2 DataAccess Api.
             ```json
             "Database": {
-                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Application Name=AltaSoft.PSD2"
+                "ConnectionString": "Data Source=localhost;Initial Catalog=PSD2_Portal;Integrated Security=true;Encrypt=false;TrustServerCertificate=true;Application Name=AltaSoft.PSD2"
             }
             ```
 
