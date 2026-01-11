@@ -222,7 +222,7 @@
         1. Select ```https``` in ```Binding: Type``` field
         1. Enter ```psd2-xs2a-sandbox.yourdomain.ge``` in ```Binding: Host name``` field and select ```Require Server Name Indication```
         1. Check ```Disable HTTP/2```
-        1. Select ```*.yourdomain.ge``` certificate in ```Binding: SSL certificate``` field
+        1. Select ```QWAC Certificate eg.(*.yourdomain.ge)``` certificate in ```Binding: SSL certificate``` field
         1. Press ```OK```
         1. Select newly created site and select ```SSL Settings```
         
